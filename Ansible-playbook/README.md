@@ -5,6 +5,9 @@
 - [Ansible Playbooks Introduction](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html)
 - [Ansible Built-in Collections](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html)
 
+### Learning & Practice Resources
+- [Ansible Zero to Hero GitHub Repository](https://github.com/iam-veeramalla/ansible-zero-to-hero)
+
 ---
 
 ## Outcomes of Hands-On Practice
