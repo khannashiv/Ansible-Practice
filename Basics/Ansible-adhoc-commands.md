@@ -9,3 +9,8 @@
 - ansible -i inventory.ini -m ping all
 - ansible -i inventory.ini -m shell -a "ls -al /etc/" app
 - ansible -i inventory.ini -m shell -a "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk" all
+
+
+**Outcomes of sample ansible adhoc commands**
+
+- ![Ansible-adhoc-1](./Images/Ansible-adhoc-1.png)
