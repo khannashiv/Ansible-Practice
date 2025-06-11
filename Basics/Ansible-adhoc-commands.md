@@ -13,4 +13,4 @@
 
 **Outcomes of sample ansible adhoc commands**
 
-- ![Ansible-adhoc-1](./Images/Ansible-adhoc-1.png)
+- ![Ansible-adhoc-1](../Images/Ansible-adhoc-1.png)
