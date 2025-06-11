@@ -1,11 +1,15 @@
-## For writting ansible playbook do refer following documetation.
+# Ansible Playbook Guide
 
-- Refrence:
-    - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html
-    - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html
+## Reference Documentation
 
+- [Ansible Playbooks Introduction](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_intro.html)
+- [Ansible Built-in Collections](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html)
 
-## Outcomes of hands-on in the form of screenshots.
+---
+
+## Outcomes of Hands-On Practice
+
+Below are screenshots showcasing the outcomes from running various Ansible playbooks:
 
 - ![Ansible-playbook-1](../Images/Ansible-playbook-1.png)
 - ![Ansible-playbook-2](../Images/Ansible-playbook-2.png)
