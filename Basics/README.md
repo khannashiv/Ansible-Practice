@@ -45,3 +45,39 @@
   pip install ansible-lint
   ```
 - For more advanced usage, refer to the [Ansible User Guide](https://docs.ansible.com/ansible/latest/user_guide/index.html).
+
+---
+
+**Setting up passwordless SSH authentication for managed nodes**
+
+To allow your Ansible control node to connect to managed nodes without entering a password each time, follow these steps:
+
+1. **Copy your private key to your Linux home directory (if needed):**
+    ```sh
+    cp /mnt/d/path/to/your/private-key.pem ~/your-key.pem
+    ```
+    Replace `/mnt/d/path/to/your/private-key.pem` with the actual path to your private key file present on your windows machine & `~/your-key.pem` this will be path to ubuntu machine running on WSL.
+    
+    For example : `cp /mnt/d/Application\ Setup/Sample\ Files/Jenkins-KVP.pem /home/ubuntu/`
+
+2. **Generate the corresponding public key:**
+    ```sh
+    ssh-keygen -y -f ~/your-key.pem > ~/your-key.pub
+    ```
+    For example : `ssh-keygen -y -f ~/Jenkins-KVP.pem > ~/Jenkins-KVP.pub`
+
+3. **Add the public key to the managed node's authorized_keys:**
+    ```sh
+    cat ~/your-key.pub | ssh -i ~/your-key.pem <remote-username>@<remote-host> \
+      'mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys'
+    ```
+    Replace `<remote-username>` and `<remote-host>` with the appropriate username and IP address or hostname of your managed node.
+
+    For example : `cat ~/Jenkins-KVP.pub | ssh -i ~/Jenkins-KVP.pem ubuntu@54.83.85.130 'mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys'`
+
+> **Tip:** Ensure your private key permissions are secure:
+> ```sh
+> chmod 600 ~/your-key.pem
+> ```
+
+This setup enables passwordless SSH authentication from your control node to your managed nodes, which is required for Ansible to operate seamlessly.
