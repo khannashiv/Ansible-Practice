@@ -2,7 +2,7 @@
 galaxy_info:
   author: Shiv Kumar Khanna
   description: Installing custom web server on ubuntu OS
-  company: your company (optional)
+  company: AVE Enterprise
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
