@@ -1,27 +1,42 @@
-# Setup EC2 Collection and Authentication
+# Ansible EC2 Collection Setup & Authentication Guide
 
-## Install boto3
+This guide will help you set up the required dependencies and securely manage AWS credentials for Ansible automation with EC2.
 
-```
-`pip install boto3`
-```
+---
 
-## Install AWS Collection
+## 1. Install Dependencies
 
-```
-`ansible-galaxy collection install amazon.aws`
-```
+### Install `boto3`
 
-## Setup Vault 
-
-1. Create a password for vault
-
-```
-`openssl rand -base64 2048 > vault.pass`
+```sh
+pip install boto3
 ```
 
-2. Add your AWS credentials using the below vault command
+### Install AWS Ansible Collection
 
+```sh
+ansible-galaxy collection install amazon.aws
 ```
-`ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass`
+
+---
+
+## 2. Secure AWS Credentials with Ansible Vault
+
+### Step 1: Create a Vault Password File
+
+```sh
+openssl rand -base64 2048 > vault.pass
 ```
+
+### Step 2: Add AWS Credentials to Vault
+
+```sh
+ansible-vault create group_vars/all/pass.yml --vault-password-file vault.pass
+```
+
+Add your AWS credentials in the `pass.yml` file as needed.
+
+---
+
+**Tip:**  
+Keep your `vault.pass` file secure and never commit it to version control.
