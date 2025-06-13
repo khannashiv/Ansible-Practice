@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+We are going to create EC2 instances using ansible collection.
 
 Requirements
 ------------
