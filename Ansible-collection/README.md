@@ -215,4 +215,15 @@ ansible-playbook modified-ec2-create.yaml --extra-vars "@vault-aws.yaml" --vault
 
 ## 📸 Outcomes of Hands-on (Screenshots)
 
-_Add your screenshots here to document your results!_
+---
+
+- ![Ansible-collection-1](../Images/Ansible-collection-1.png)
+- ![Ansible-collection-2](../Images/Ansible-collection-2.png)
+- ![Ansible-collection-3](../Images/Ansible-collection-3.png)
+- ![Ansible-collection-4](../Images/Ansible-collection-4.png)
+- ![Ansible-collection-5](../Images/Ansible-collection-5.png)
+- ![Ansible-collection-6](../Images/Ansible-collection-6.png)
+- ![Ansible-collection-7](../Images/Ansible-collection-7.png)
+- ![Ansible-collection-8](../Images/Ansible-collection-8.png)
+
+---
