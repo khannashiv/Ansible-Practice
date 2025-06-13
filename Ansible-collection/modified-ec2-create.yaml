@@ -1,0 +1,6 @@
+---
+- name: Creating-EC2
+  hosts: localhost
+  connection: local
+  roles:
+    - ec2-role

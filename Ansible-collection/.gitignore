@@ -1,0 +1,3 @@
+vault.pass
+vault-aws.yaml
+# ec2-role/vars/main.yml

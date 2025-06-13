@@ -1,0 +1,5 @@
+---
+# defaults file for ec2-role
+image_type: ami-0731becbf832f281e
+ec2_instance_type: t3.micro
+region: us-east-1

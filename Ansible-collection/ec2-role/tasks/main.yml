@@ -1,0 +1,15 @@
+---
+# tasks file for ec2-role
+- name: Start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    name: "my-demo-vm"
+    instance_type: "{{ ec2_instance_type }}"
+    aws_access_key_id: "{{ aws_access_key_id }}"
+    aws_secret_access_key: "{{ aws_secret_access_key }}"
+    security_groups: default
+    region: "{{ region }}"
+    network_interfaces:
+      - assign_public_ip: true
+    image_id: "{{ image_type }}"
+    tags:
+      Environment: Testing
