@@ -1,15 +1,15 @@
 ---
 # tasks file for ec2-role
-  - name: Start an instance with a public IP address
-    amazon.aws.ec2_instance:
-      name: "my-demo-vm"
-      instance_type: t2.micro
-      aws_access_key_id: "{{ aws_access_key_id }}"
-      aws_secret_access_key: "{{ aws_secret_access_key }}"
-      security_groups: default
-      region: us-east-1
-      network_interfaces:
-        - assign_public_ip: true
-      image_id: ami-0731becbf832f281e
-      tags:
-        Environment: Testing
+- name: Start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    name: "my-demo-vm"
+    instance_type: t2.micro
+    aws_access_key_id: "{{ aws_access_key_id }}"
+    aws_secret_access_key: "{{ aws_secret_access_key }}"
+    security_groups: default
+    region: us-east-1
+    network_interfaces:
+      - assign_public_ip: true
+    image_id: ami-0731becbf832f281e
+    tags:
+      Environment: Testing
