@@ -1,0 +1,41 @@
+---
+- name: Checking docker installation
+  hosts: all
+  become: true
+  tasks:
+    - name: Checking the existence of openssl and openssh packages on managed nodes
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - openssl
+        - openssh
+      register: output
+      ignore_errors: true
+
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: output
+
+    - name: Check docker version
+      ansible.builtin.command: docker --version
+      changed_when: false
+      register: command_result
+      failed_when:
+        command_result.rc == 0
+
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: command_result
+
+    - name: Installing Docker
+      ansible.builtin.apt:
+        name: docker.io
+        state: present
+      when: command_result.rc != 0
+      register: final_output
+      ignore_errors: true
+
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: final_output
