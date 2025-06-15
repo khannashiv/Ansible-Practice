@@ -29,12 +29,21 @@
           - "First bucket: {{ result.buckets[0] }}"
           - "First bucket name: {{ result.buckets[0].name }}"
 
-    - name: Checking versioning on S3 buckets
+    - name: Get versioning info for each bucket
       amazon.aws.s3_bucket:
-        name: "{{ item.name }} versioning: {{ item.versioning.Versioning }}"
-        versioning: true
+        name: "{{ item.name }}"
+        state: present
       loop: "{{ result.buckets }}"
       register: versioning_result
+
+    - name: Versioning of bucket 1
+      ansible.builtin.debug:
+        var: versioning_result
+
+    # - name: Display versioning status for each bucket
+    #   ansible.builtin.debug:
+    #     msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Versioning | default(item.versioning.status) | default('Unknown') }}"
+    #   loop: "{{ versioning_result.results }}"
 
     # - name: Versioning of bucket 1
     #   ansible.builtin.debug:
