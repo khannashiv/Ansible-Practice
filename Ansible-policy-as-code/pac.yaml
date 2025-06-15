@@ -44,6 +44,7 @@
 
     - name: Display versioning status for each bucket using loop
       ansible.builtin.debug:
+        # Here L.H.S item in (item.item.name) point to this object i.e. versioning_result.results
         msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Status }}"
       loop: "{{ versioning_result.results }}"  # Loops over results for each bucket
 
