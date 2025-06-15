@@ -36,6 +36,14 @@
       loop: "{{ result.buckets }}"
       register: versioning_result
 
-    - name: Displaying the output
+    - name: Versioning of bucket 1
       ansible.builtin.debug:
-        var: versioning_result.versioning.Versioning
+        var: versioning_result.results[0].versioning.Versioning
+
+    # - name: Display versioning for all buckets
+    #   ansible.builtin.debug:
+    #     msg: |
+    #       Bucket 1 versioning: {{ versioning_result.results[0].versioning.Versioning }}
+    #       Bucket 2 versioning: {{ versioning_result.results[1].versioning.Versioning }}
+    #       Bucket 3 versioning: {{ versioning_result.results[2].versioning.Versioning }}
+

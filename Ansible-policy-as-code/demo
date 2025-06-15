@@ -1,0 +1,334 @@
+TASK [Displaying the output] **********************************************************************************************************
+ok: [localhost] => {
+    "versioning_result": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "accelerate_enabled": false,
+                "acl": "private",
+                "acl_grants": [
+                    {
+                        "grantee": {
+                            "display_name": "aasthaverma207",
+                            "id": "21194fb1a7fb7e9bf67ce756e0d9a3f5559086cbe970ef1b12cb81af780df741",
+                            "type": "CanonicalUser"
+                        },
+                        "permission": "FULL_CONTROL"
+                    }
+                ],
+                "ansible_loop_var": "item",
+                "bucket_inventory": [],
+                "changed": false,
+                "encryption": {
+                    "SSEAlgorithm": "AES256"
+                },
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "accelerate_enabled": null,
+                        "access_key": "AKIASBGQLCPWNCNQOH2R",
+                        "acl": null,
+                        "aws_ca_bundle": null,
+                        "aws_config": null,
+                        "bucket_key_enabled": null,
+                        "ceph": false,
+                        "debug_botocore_endpoint_logs": false,
+                        "delete_object_ownership": false,
+                        "delete_public_access": false,
+                        "dualstack": false,
+                        "encryption": null,
+                        "encryption_key_id": null,
+                        "endpoint_url": null,
+                        "force": false,
+                        "inventory": null,
+                        "name": "my-first-aws-bucket-org-1",
+                        "object_lock_default_retention": null,
+                        "object_lock_enabled": null,
+                        "object_ownership": null,
+                        "policy": null,
+                        "profile": null,
+                        "public_access": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "requester_pays": null,
+                        "secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "session_token": null,
+                        "state": "present",
+                        "tags": null,
+                        "validate_bucket_name": true,
+                        "validate_certs": true,
+                        "versioning": true
+                    }
+                },
+                "item": {
+                    "creation_date": "2025-06-15T04:37:50+00:00",
+                    "name": "my-first-aws-bucket-org-1"
+                },
+                "name": "my-first-aws-bucket-org-1",
+                "object_lock_default_retention": {},
+                "object_lock_enabled": false,
+                "object_ownership": "BucketOwnerEnforced",
+                "policy": {},
+                "public_access_block": {
+                    "BlockPublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "IgnorePublicAcls": true,
+                    "PublicAccessBlockConfiguration": {
+                        "BlockPublicAcls": true,
+                        "BlockPublicPolicy": true,
+                        "IgnorePublicAcls": true,
+                        "RestrictPublicBuckets": true
+                    },
+                    "RestrictPublicBuckets": true,
+                    "block_public_acls": true,
+                    "block_public_policy": true,
+                    "ignore_public_acls": true,
+                    "restrict_public_buckets": true,
+                    "tags": {}
+                },
+                "requester_pays": false,
+                "tags": {},
+                "versioning": {
+                    "MFADelete": "Disabled",
+                    "MfaDelete": "Disabled",
+                    "Status": "Enabled",
+                    "Versioning": "Enabled",
+                    "response_metadata": {
+                        "host_id": "k9iDUIuhJxdG2vmy0WqZJG4RpgQx3SMzMed65krHK5DNVbvqQfHZlEtkKG39HpzN6Tg8TvJku4xF5Jw/e/m0Aw5uD370Vtvq+NHJK2Tc7dg=",
+                        "http_headers": {
+                            "date": "Sun, 15 Jun 2025 08:06:25 GMT",
+                            "server": "AmazonS3",
+                            "transfer-encoding": "chunked",
+                            "x-amz-id-2": "k9iDUIuhJxdG2vmy0WqZJG4RpgQx3SMzMed65krHK5DNVbvqQfHZlEtkKG39HpzN6Tg8TvJku4xF5Jw/e/m0Aw5uD370Vtvq+NHJK2Tc7dg=",
+                            "x-amz-request-id": "DX735XHYZ3BCNPQB"
+                        },
+                        "http_status_code": 200,
+                        "request_id": "DX735XHYZ3BCNPQB",
+                        "retry_attempts": 0
+                    },
+                    "status": "Enabled",
+                    "tags": {}
+                }
+            },
+            {
+                "accelerate_enabled": false,
+                "acl": "private",
+                "acl_grants": [
+                    {
+                        "grantee": {
+                            "display_name": "aasthaverma207",
+                            "id": "21194fb1a7fb7e9bf67ce756e0d9a3f5559086cbe970ef1b12cb81af780df741",
+                            "type": "CanonicalUser"
+                        },
+                        "permission": "FULL_CONTROL"
+                    }
+                ],
+                "ansible_loop_var": "item",
+                "bucket_inventory": [],
+                "changed": false,
+                "encryption": {
+                    "SSEAlgorithm": "AES256"
+                },
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "accelerate_enabled": null,
+                        "access_key": "AKIASBGQLCPWNCNQOH2R",
+                        "acl": null,
+                        "aws_ca_bundle": null,
+                        "aws_config": null,
+                        "bucket_key_enabled": null,
+                        "ceph": false,
+                        "debug_botocore_endpoint_logs": false,
+                        "delete_object_ownership": false,
+                        "delete_public_access": false,
+                        "dualstack": false,
+                        "encryption": null,
+                        "encryption_key_id": null,
+                        "endpoint_url": null,
+                        "force": false,
+                        "inventory": null,
+                        "name": "my-second-aws-bucket-org-2",
+                        "object_lock_default_retention": null,
+                        "object_lock_enabled": null,
+                        "object_ownership": null,
+                        "policy": null,
+                        "profile": null,
+                        "public_access": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "requester_pays": null,
+                        "secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "session_token": null,
+                        "state": "present",
+                        "tags": null,
+                        "validate_bucket_name": true,
+                        "validate_certs": true,
+                        "versioning": true
+                    }
+                },
+                "item": {
+                    "creation_date": "2025-06-15T04:38:36+00:00",
+                    "name": "my-second-aws-bucket-org-2"
+                },
+                "name": "my-second-aws-bucket-org-2",
+                "object_lock_default_retention": {},
+                "object_lock_enabled": false,
+                "object_ownership": "BucketOwnerEnforced",
+                "policy": {},
+                "public_access_block": {
+                    "BlockPublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "IgnorePublicAcls": true,
+                    "PublicAccessBlockConfiguration": {
+                        "BlockPublicAcls": true,
+                        "BlockPublicPolicy": true,
+                        "IgnorePublicAcls": true,
+                        "RestrictPublicBuckets": true
+                    },
+                    "RestrictPublicBuckets": true,
+                    "block_public_acls": true,
+                    "block_public_policy": true,
+                    "ignore_public_acls": true,
+                    "restrict_public_buckets": true,
+                    "tags": {}
+                },
+                "requester_pays": false,
+                "tags": {},
+                "versioning": {
+                    "MFADelete": "Disabled",
+                    "MfaDelete": "Disabled",
+                    "Status": "Enabled",
+                    "Versioning": "Enabled",
+                    "response_metadata": {
+                        "host_id": "0bnj+ozL3fAQ+tUUAgxtkAmCOrKb3CwdxL48AQdVlG9gt98t8D0sEE2U5Z2lTZ0CFXGuEQB6ROI=",
+                        "http_headers": {
+                            "date": "Sun, 15 Jun 2025 08:06:30 GMT",
+                            "server": "AmazonS3",
+                            "transfer-encoding": "chunked",
+                            "x-amz-id-2": "0bnj+ozL3fAQ+tUUAgxtkAmCOrKb3CwdxL48AQdVlG9gt98t8D0sEE2U5Z2lTZ0CFXGuEQB6ROI=",
+                            "x-amz-request-id": "VTA62QJMGZMPASX5"
+                        },
+                        "http_status_code": 200,
+                        "request_id": "VTA62QJMGZMPASX5",
+                        "retry_attempts": 0
+                    },
+                    "status": "Enabled",
+                    "tags": {}
+                }
+            },
+            {
+                "accelerate_enabled": false,
+                "acl": "private",
+                "acl_grants": [
+                    {
+                        "grantee": {
+                            "display_name": "aasthaverma207",
+                            "id": "21194fb1a7fb7e9bf67ce756e0d9a3f5559086cbe970ef1b12cb81af780df741",
+                            "type": "CanonicalUser"
+                        },
+                        "permission": "FULL_CONTROL"
+                    }
+                ],
+                "ansible_loop_var": "item",
+                "bucket_inventory": [],
+                "changed": false,
+                "encryption": {
+                    "SSEAlgorithm": "AES256"
+                },
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "accelerate_enabled": null,
+                        "access_key": "AKIASBGQLCPWNCNQOH2R",
+                        "acl": null,
+                        "aws_ca_bundle": null,
+                        "aws_config": null,
+                        "bucket_key_enabled": null,
+                        "ceph": false,
+                        "debug_botocore_endpoint_logs": false,
+                        "delete_object_ownership": false,
+                        "delete_public_access": false,
+                        "dualstack": false,
+                        "encryption": null,
+                        "encryption_key_id": null,
+                        "endpoint_url": null,
+                        "force": false,
+                        "inventory": null,
+                        "name": "my-third-aws-bucket-org-3",
+                        "object_lock_default_retention": null,
+                        "object_lock_enabled": null,
+                        "object_ownership": null,
+                        "policy": null,
+                        "profile": null,
+                        "public_access": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "requester_pays": null,
+                        "secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+                        "session_token": null,
+                        "state": "present",
+                        "tags": null,
+                        "validate_bucket_name": true,
+                        "validate_certs": true,
+                        "versioning": true
+                    }
+                },
+                "item": {
+                    "creation_date": "2025-06-15T04:39:13+00:00",
+                    "name": "my-third-aws-bucket-org-3"
+                },
+                "name": "my-third-aws-bucket-org-3",
+                "object_lock_default_retention": {},
+                "object_lock_enabled": false,
+                "object_ownership": "BucketOwnerEnforced",
+                "policy": {},
+                "public_access_block": {
+                    "BlockPublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "IgnorePublicAcls": true,
+                    "PublicAccessBlockConfiguration": {
+                        "BlockPublicAcls": true,
+                        "BlockPublicPolicy": true,
+                        "IgnorePublicAcls": true,
+                        "RestrictPublicBuckets": true
+                    },
+                    "RestrictPublicBuckets": true,
+                    "block_public_acls": true,
+                    "block_public_policy": true,
+                    "ignore_public_acls": true,
+                    "restrict_public_buckets": true,
+                    "tags": {}
+                },
+                "requester_pays": false,
+                "tags": {},
+                "versioning": {
+                    "MFADelete": "Disabled",
+                    "MfaDelete": "Disabled",
+                    "Status": "Enabled",
+                    "Versioning": "Enabled",
+                    "response_metadata": {
+                        "host_id": "WGRa5tBvEdk2VHb0gj6RIgvZX0pqGkrmIZXAWR2ZmI7rUhZiBVy1kUbSZ+tPOIhRfLhQ4DKUB13p6gok20Ecp5AJIE3EEO4T",
+                        "http_headers": {
+                            "date": "Sun, 15 Jun 2025 08:06:34 GMT",
+                            "server": "AmazonS3",
+                            "transfer-encoding": "chunked",
+                            "x-amz-id-2": "WGRa5tBvEdk2VHb0gj6RIgvZX0pqGkrmIZXAWR2ZmI7rUhZiBVy1kUbSZ+tPOIhRfLhQ4DKUB13p6gok20Ecp5AJIE3EEO4T",
+                            "x-amz-request-id": "F46SASMBGDPCXTXV"
+                        },
+                        "http_status_code": 200,
+                        "request_id": "F46SASMBGDPCXTXV",
+                        "retry_attempts": 0
+                    },
+                    "status": "Enabled",
+                    "tags": {}
+                }
+            }
+        ],
+        "skipped": false
+    }
+}
+
+PLAY RECAP ****************************************************************************************************************************
+localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
