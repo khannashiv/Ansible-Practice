@@ -41,6 +41,11 @@
       ansible.builtin.debug:
         var: versioning_result
 
+    - name: Display versioning status for each bucket
+      ansible.builtin.debug:
+        msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Status }}"
+      loop: "{{ versioning_result.results }}"
+
     # - name: Display versioning status for each bucket
     #   ansible.builtin.debug:
     #     msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Versioning | default(item.versioning.status) | default('Unknown') }}"
