@@ -12,3 +12,14 @@
 
 ansible-playbook -i inventory.ini error-handling.yaml 
 ## Outcomes of hands-on
+
+---
+
+- ![Ansible-error-handling-1](../Images/Ansible-error-handling-1.png)
+- ![Ansible-error-handling-2](../Images/Ansible-error-handling-2.png)
+- ![Ansible-error-handling-3](../Images/Ansible-error-handling-3.png)
+- ![Ansible-error-handling-4](../Images/Ansible-error-handling-4.png)
+- ![Ansible-error-handling-5](../Images/Ansible-error-handling-5.png)
+- ![Ansible-error-handling-6](../Images/Ansible-error-handling-6.png)
+
+---
