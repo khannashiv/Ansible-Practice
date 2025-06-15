@@ -119,18 +119,6 @@ In this hands-on practice, we are writing an Ansible playbook which will:
 
 ---
 
-## Contribution Guidelines
-
-Contributions are welcome! Please fork the repository and open a pull request.
-
----
-
-## License
-
-[MIT License](../LICENSE) (if applicable, please update if another license is used.)
-
----
-
 ## Author
 
 - [khannashiv](https://github.com/khannashiv)
