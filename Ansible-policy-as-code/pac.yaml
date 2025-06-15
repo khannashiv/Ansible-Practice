@@ -1,0 +1,46 @@
+---
+- name: Using ansible as PAC
+  hosts: localhost
+  connection: local
+  # become: true
+  # environment:
+  #   AWS_ACCESS_KEY_ID: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
+  #   AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+  #   AWS_REGION: "{{ lookup('env', 'AWS_REGION') }}"
+
+  tasks:
+    - name: Checking if S3 bucket has versioning enabled or not
+    # Lists all S3 buckets
+      amazon.aws.s3_bucket_info:
+      register: result
+      ignore_errors: true
+
+    # - name: Displaying the output
+    #   ansible.builtin.debug:
+    #     var: result
+
+    # - name: Display first bucket
+    #   ansible.builtin.debug:
+    #     var: result.buckets[0]
+
+    - name: Display summary
+      ansible.builtin.debug:
+        msg:
+          - "Total buckets: {{ result.buckets | length }}"
+          - "First bucket: {{ result.buckets[0] }}"
+          - "First bucket name: {{ result.buckets[0].name }}"
+
+    - name: Checking if versioning enabled or not
+      amazon.aws.s3_bucket:
+        name: "my-first-aws-bucket-org-1"
+      register: output
+      #   name: "{{ item.name }}"
+      # loop: "{{ result.buckets }}"
+
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: output
+
+    - name: Show versioning status
+      ansible.builtin.debug:
+        var: output.versioning.Versioning
