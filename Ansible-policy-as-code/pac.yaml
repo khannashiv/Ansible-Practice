@@ -10,14 +10,13 @@
 
   tasks:
     - name: Checking if S3 bucket has versioning enabled or not
-    # Lists all S3 buckets
       amazon.aws.s3_bucket_info:
       register: result
       ignore_errors: true
 
-    # - name: Displaying the output
-    #   ansible.builtin.debug:
-    #     var: result
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: result
 
     # - name: Display first bucket
     #   ansible.builtin.debug:
@@ -30,17 +29,9 @@
           - "First bucket: {{ result.buckets[0] }}"
           - "First bucket name: {{ result.buckets[0].name }}"
 
-    - name: Checking if versioning enabled or not
+    - name: Checking versioning on S3 buckets
       amazon.aws.s3_bucket:
-        name: "my-first-aws-bucket-org-1"
-      register: output
-      #   name: "{{ item.name }}"
-      # loop: "{{ result.buckets }}"
-
-    - name: Displaying the output
-      ansible.builtin.debug:
-        var: output
-
-    - name: Show versioning status
-      ansible.builtin.debug:
-        var: output.versioning.Versioning
+        name: "{{ item.name }}"
+        versioning: true
+      loop: "{{ result.buckets }}"
+      register: versioning_result
