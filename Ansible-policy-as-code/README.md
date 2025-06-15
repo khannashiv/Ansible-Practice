@@ -8,7 +8,11 @@
 - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html
 - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_lookups.html
 - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html
+- https://github.com/iam-veeramalla/ansible-zero-to-hero
 
+## Command used
+
+- (ansible-venv) ubuntu@LAPTOP-49SH4K4V:~/Ansible-Practice-1/Ansible-policy-as-code$ ansible-playbook pac.yaml
 
 🔁 Quick Rule of Thumb
 | Use Case | Use | | Use - |
@@ -21,3 +25,15 @@
 --- 
 
 ## Outcomes of this hands-on in the form of screenshots
+
+--- 
+
+- ![Ansible-PAC-1](../Images/Ansible-PAC-1.png)
+- ![Ansible-PAC-2](../Images/Ansible-PAC-2.png)
+- ![Ansible-PAC-3](../Images/Ansible-PAC-3.png)
+- ![Ansible-PAC-4](../Images/Ansible-PAC-4.png)
+- ![Ansible-PAC-5](../Images/Ansible-PAC-5.png)
+- ![Ansible-PAC-6](../Images/Ansible-PAC-6.png)
+- ![Ansible-PAC-7](../Images/Ansible-PAC-7.png)
+
+---
