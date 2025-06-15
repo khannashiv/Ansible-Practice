@@ -62,7 +62,7 @@ In this hands-on practice, we are writing an Ansible playbook which will:
 
 ---
 
-## 🔁 Quick Rule of Thumb
+## 🔁 Quick Rule of Thumb :- Choosing between | and - after msg: block
 
 <table>
     <thead>
