@@ -35,3 +35,7 @@
         versioning: true
       loop: "{{ result.buckets }}"
       register: versioning_result
+
+    - name: Displaying the output
+      ansible.builtin.debug:
+        var: versioning_result.versioning.Versioning
