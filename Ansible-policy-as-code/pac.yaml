@@ -2,53 +2,54 @@
 - name: Using ansible as PAC
   hosts: localhost
   connection: local
-  # become: true
+  # become: true  # Uncomment if you need privilege escalation
   # environment:
   #   AWS_ACCESS_KEY_ID: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
   #   AWS_SECRET_ACCESS_KEY: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
   #   AWS_REGION: "{{ lookup('env', 'AWS_REGION') }}"
+  # Uncomment and set environment variables for AWS authentication if needed
 
   tasks:
     - name: Checking if S3 bucket has versioning enabled or not
-      amazon.aws.s3_bucket_info:
-      register: result
-      ignore_errors: true
+      amazon.aws.s3_bucket_info:  # Gathers info about all S3 buckets
+      register: result            # Stores the result in 'result'
+      ignore_errors: true         # Continues even if this task fails
 
     - name: Displaying the output
       ansible.builtin.debug:
-        var: result
+        var: result               # Shows the full result variable
 
     - name: Display first bucket
       ansible.builtin.debug:
-        var: result.buckets[0]
+        var: result.buckets[0]    # Shows details of the first bucket
 
     - name: Display summary
       ansible.builtin.debug:
         msg:
-          - "Total buckets: {{ result.buckets | length }}"
-          - "First bucket: {{ result.buckets[0] }}"
-          - "First bucket name: {{ result.buckets[0].name }}"
+          - "Total buckets: {{ result.buckets | length }}"           # Shows total number of buckets
+          - "First bucket: {{ result.buckets[0] }}"                  # Shows first bucket details
+          - "First bucket name: {{ result.buckets[0].name }}"        # Shows first bucket name
 
     - name: Get and enable versioning  for each bucket
       amazon.aws.s3_bucket:
-        name: "{{ item.name }}"
-        state: present
-        versioning: true
-      loop: "{{ result.buckets }}"
-      register: versioning_result
+        name: "{{ item.name }}"      # Bucket name from the list
+        state: present               # Ensures the bucket exists
+        versioning: true             # Enables versioning
+      loop: "{{ result.buckets }}"   # Loops over all buckets
+      register: versioning_result    # Stores results for each bucket
 
     - name: Versioning of bucket 1
       ansible.builtin.debug:
-        var: versioning_result
+        var: versioning_result       # Shows the result of versioning task
 
     - name: Display versioning status for each bucket using loop
       ansible.builtin.debug:
         msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Status }}"
-      loop: "{{ versioning_result.results }}"
+      loop: "{{ versioning_result.results }}"  # Loops over results for each bucket
 
     - name: Versioning of bucket 1
       ansible.builtin.debug:
-        var: versioning_result.results[0].versioning.Status
+        var: versioning_result.results[0].versioning.Status  # Shows versioning status of first bucket
 
     - name: Display versioning for all buckets using hardcoded index approach
       ansible.builtin.debug:
@@ -56,3 +57,4 @@
           Bucket 1 versioning: {{ versioning_result.results[0].versioning.Status }}
           Bucket 2 versioning: {{ versioning_result.results[1].versioning.Status }}
           Bucket 3 versioning: {{ versioning_result.results[2].versioning.Status }}
+          # Shows versioning status for first three buckets (indexes are hardcoded)
