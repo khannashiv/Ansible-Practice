@@ -64,12 +64,37 @@ In this hands-on practice, we are writing an Ansible playbook which will:
 
 ## 🔁 Quick Rule of Thumb
 
-| Use Case                      | Use `|` (Literal Block) | Use `>-` (Folded Block) |
-|-------------------------------|:----------------------:|:-----------------------:|
-| One multiline string          | ✅ Yes                 | 🚫 No                   |
-| Multiple independent messages | 🚫 No                  | ✅ Yes                  |
-| Want newline preserved        | ✅ Yes                 | 🚫 No                   |
-| Output shown as YAML list     | 🚫 No                  | ✅ Yes                  |
+<table>
+    <thead>
+        <tr>
+            <th>Use Case</th>
+            <th>Use <code>|</code> (Literal Block)</th>
+            <th>Use <code>&gt;-</code> (Folded Block)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>One multiline string</td>
+            <td style="text-align:center;">✅ Yes</td>
+            <td style="text-align:center;">🚫 No</td>
+        </tr>
+        <tr>
+            <td>Multiple independent messages</td>
+            <td style="text-align:center;">🚫 No</td>
+            <td style="text-align:center;">✅ Yes</td>
+        </tr>
+        <tr>
+            <td>Want newline preserved</td>
+            <td style="text-align:center;">✅ Yes</td>
+            <td style="text-align:center;">🚫 No</td>
+        </tr>
+        <tr>
+            <td>Output shown as YAML list</td>
+            <td style="text-align:center;">🚫 No</td>
+            <td style="text-align:center;">✅ Yes</td>
+        </tr>
+    </tbody>
+</table>
 
 ---
 
