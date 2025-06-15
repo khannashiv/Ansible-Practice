@@ -1,8 +1,35 @@
 # Using Ansible as Policy as Code
 
-In this hands-on practice, we are writing an Ansible playbook that will:
-- Discover S3 buckets present under an AWS account and fetch their information.
+In this hands-on practice, we are writing an Ansible playbook which will:
+- Discover S3 buckets present in an AWS account and fetch their information.
 - Enable versioning on S3 buckets if not already enabled.
+
+---
+
+## Prerequisites
+
+- Python and [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) installed.
+- AWS CLI installed and configured with credentials having permissions for `s3:ListBucket`, `s3:GetBucketVersioning`, and `s3:PutBucketVersioning`.
+
+---
+
+## Setup Instructions
+
+1. **Clone this repository** and navigate to the `Ansible-policy-as-code` directory.
+2. (Recommended) Create and activate a Python virtual environment:
+   ```bash
+   python3 -m venv ansible-venv
+   source ansible-venv/bin/activate
+   ```
+3. **Install Ansible and dependencies:**
+   ```bash
+   pip install ansible boto3 botocore
+   ```
+4. **Configure your AWS credentials:**
+   ```bash
+   aws configure
+   ```
+   or set environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_DEFAULT_REGION`.
 
 ---
 
@@ -17,6 +44,16 @@ In this hands-on practice, we are writing an Ansible playbook that will:
 
 ---
 
+## Playbook Overview
+
+- The playbook (`pac.yaml`) will:
+  - Collect a list of all S3 buckets in your AWS account.
+  - Fetch information for each bucket.
+  - Enable versioning where it is not already enabled.
+- Variables can be set in a `vars` section or an external vars file if needed.
+
+---
+
 ## Command Used
 
 ```bash
@@ -25,16 +62,18 @@ In this hands-on practice, we are writing an Ansible playbook that will:
 
 ---
 
-## Quick Rule of Thumb
+## 🔁 Quick Rule of Thumb
 
-| Use Case                      | Use `|` (Literal Block) | Use `|-` (Folded Block) |
+| Use Case                      | Use `|` (Literal Block) | Use `>-` (Folded Block) |
 |-------------------------------|:----------------------:|:-----------------------:|
 | One multiline string          | ✅ Yes                 | 🚫 No                   |
 | Multiple independent messages | 🚫 No                  | ✅ Yes                  |
 | Want newline preserved        | ✅ Yes                 | 🚫 No                   |
 | Output shown as YAML list     | 🚫 No                  | ✅ Yes                  |
 
-## Outcomes of this Hands-On (Screenshots)
+---
+
+## Outcomes of this Hands-on (Screenshots)
 
 - ![Ansible-PAC-1](../Images/Ansible-PAC-1.png)
 - ![Ansible-PAC-2](../Images/Ansible-PAC-2.png)
@@ -45,5 +84,28 @@ In this hands-on practice, we are writing an Ansible playbook that will:
 - ![Ansible-PAC-7](../Images/Ansible-PAC-7.png)
 - ![Ansible-PAC-8](../Images/Ansible-PAC-8.png)
 - ![Ansible-PAC-9](../Images/Ansible-PAC-9.png)
+---
+
+## Troubleshooting / Common Issues
+
+- **Missing AWS permissions:** Check your IAM role/policy for required S3 permissions.
+- **No buckets found:** Ensure you are in the correct AWS region and have the necessary permissions.
+- **Module not found:** Ensure `boto3` and `botocore` are installed and accessible in your Python environment.
 
 ---
+
+## Contribution Guidelines
+
+Contributions are welcome! Please fork the repository and open a pull request.
+
+---
+
+## License
+
+[MIT License](../LICENSE) (if applicable, please update if another license is used.)
+
+---
+
+## Author
+
+- [khannashiv](https://github.com/khannashiv)
