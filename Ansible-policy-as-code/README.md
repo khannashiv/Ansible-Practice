@@ -27,12 +27,12 @@ In this hands-on practice, we are writing an Ansible playbook that will:
 
 ## Quick Rule of Thumb
 
-| Use Case                       | Use `|-` (Literal Block) | Use `|` (Folded Block)      |
+| Use Case                       | Use `|-` (Literal Block) | Use `|` (Folded Block)     |
 |---------------------------------|:-----------------------:|:--------------------------:|
-| One multiline string            |          ✅ Yes         |            🚫 No           |
-| Multiple independent messages   |          🚫 No          |            ✅ Yes           |
-| Want newline preserved          |          ✅ Yes         |            🚫 No           |
-| Output shown as YAML list       |          🚫 No          |            ✅ Yes           |
+| One multiline string            |          ✅ Yes         |            🚫 No          |
+| Multiple independent messages   |          🚫 No          |            ✅ Yes         |
+| Want newline preserved          |          ✅ Yes         |            🚫 No          |
+| Output shown as YAML list       |          🚫 No          |            ✅ Yes         |
 
 ---
 
