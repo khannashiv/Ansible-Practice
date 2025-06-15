@@ -22,14 +22,14 @@
     #   ansible.builtin.debug:
     #     var: result.buckets[0]
 
-    - name: Display summary
-      ansible.builtin.debug:
-        msg:
-          - "Total buckets: {{ result.buckets | length }}"
-          - "First bucket: {{ result.buckets[0] }}"
-          - "First bucket name: {{ result.buckets[0].name }}"
+    # - name: Display summary
+    #   ansible.builtin.debug:
+    #     msg:
+    #       - "Total buckets: {{ result.buckets | length }}"
+    #       - "First bucket: {{ result.buckets[0] }}"
+    #       - "First bucket name: {{ result.buckets[0].name }}"
 
-    - name: Get versioning info for each bucket
+    - name: Get and enable versioning  for each bucket
       amazon.aws.s3_bucket:
         name: "{{ item.name }}"
         state: present
@@ -46,18 +46,13 @@
         msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Status }}"
       loop: "{{ versioning_result.results }}"
 
-    # - name: Display versioning status for each bucket
-    #   ansible.builtin.debug:
-    #     msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Versioning | default(item.versioning.status) | default('Unknown') }}"
-    #   loop: "{{ versioning_result.results }}"
-
     # - name: Versioning of bucket 1
     #   ansible.builtin.debug:
     #     var: versioning_result.results[0].versioning.Versioning
 
-    # - name: Display versioning for all buckets
-    #   ansible.builtin.debug:
-    #     msg: |
-    #       Bucket 1 versioning: {{ versioning_result.results[0].versioning.Versioning }}
-    #       Bucket 2 versioning: {{ versioning_result.results[1].versioning.Versioning }}
-    #       Bucket 3 versioning: {{ versioning_result.results[2].versioning.Versioning }}
+    - name: Display versioning for all buckets
+      ansible.builtin.debug:
+        msg: |
+          Bucket 1 versioning: {{ versioning_result.results[0].versioning.Status }}
+          Bucket 2 versioning: {{ versioning_result.results[1].versioning.Status }}
+          Bucket 3 versioning: {{ versioning_result.results[2].versioning.Status }}

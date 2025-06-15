@@ -1,4 +1,4 @@
-TASK [Displaying the output] **********************************************************************************************************
+TASK [Versioning of bucket 1] *********************************************************************************************************
 ok: [localhost] => {
     "versioning_result": {
         "changed": false,
@@ -95,16 +95,16 @@ ok: [localhost] => {
                     "Status": "Enabled",
                     "Versioning": "Enabled",
                     "response_metadata": {
-                        "host_id": "k9iDUIuhJxdG2vmy0WqZJG4RpgQx3SMzMed65krHK5DNVbvqQfHZlEtkKG39HpzN6Tg8TvJku4xF5Jw/e/m0Aw5uD370Vtvq+NHJK2Tc7dg=",
+                        "host_id": "yDPqgPJFXZRaE8PhIg69N3EGPgFg7RXW5N2h5+GqcCDLWh3KGAtzGpaHuyyePIsETFteYYoVKeLI2EOnkuxx/r2gO/Onat/t",
                         "http_headers": {
-                            "date": "Sun, 15 Jun 2025 08:06:25 GMT",
+                            "date": "Sun, 15 Jun 2025 09:13:44 GMT",
                             "server": "AmazonS3",
                             "transfer-encoding": "chunked",
-                            "x-amz-id-2": "k9iDUIuhJxdG2vmy0WqZJG4RpgQx3SMzMed65krHK5DNVbvqQfHZlEtkKG39HpzN6Tg8TvJku4xF5Jw/e/m0Aw5uD370Vtvq+NHJK2Tc7dg=",
-                            "x-amz-request-id": "DX735XHYZ3BCNPQB"
+                            "x-amz-id-2": "yDPqgPJFXZRaE8PhIg69N3EGPgFg7RXW5N2h5+GqcCDLWh3KGAtzGpaHuyyePIsETFteYYoVKeLI2EOnkuxx/r2gO/Onat/t",
+                            "x-amz-request-id": "BV7ZJVRKYK3RK21N"
                         },
                         "http_status_code": 200,
-                        "request_id": "DX735XHYZ3BCNPQB",
+                        "request_id": "BV7ZJVRKYK3RK21N",
                         "retry_attempts": 0
                     },
                     "status": "Enabled",
@@ -202,16 +202,16 @@ ok: [localhost] => {
                     "Status": "Enabled",
                     "Versioning": "Enabled",
                     "response_metadata": {
-                        "host_id": "0bnj+ozL3fAQ+tUUAgxtkAmCOrKb3CwdxL48AQdVlG9gt98t8D0sEE2U5Z2lTZ0CFXGuEQB6ROI=",
+                        "host_id": "PqcjRgAlSAUU/Tx4idQW9rEZQOsnrX0mq2BpAGEsTLBSS0bzF2iIV83ZF5K5Rl6TCQCiRo3hVQE=",
                         "http_headers": {
-                            "date": "Sun, 15 Jun 2025 08:06:30 GMT",
+                            "date": "Sun, 15 Jun 2025 09:13:48 GMT",
                             "server": "AmazonS3",
                             "transfer-encoding": "chunked",
-                            "x-amz-id-2": "0bnj+ozL3fAQ+tUUAgxtkAmCOrKb3CwdxL48AQdVlG9gt98t8D0sEE2U5Z2lTZ0CFXGuEQB6ROI=",
-                            "x-amz-request-id": "VTA62QJMGZMPASX5"
+                            "x-amz-id-2": "PqcjRgAlSAUU/Tx4idQW9rEZQOsnrX0mq2BpAGEsTLBSS0bzF2iIV83ZF5K5Rl6TCQCiRo3hVQE=",
+                            "x-amz-request-id": "BT4W47PV9PH6VR6D"
                         },
                         "http_status_code": 200,
-                        "request_id": "VTA62QJMGZMPASX5",
+                        "request_id": "BT4W47PV9PH6VR6D",
                         "retry_attempts": 0
                     },
                     "status": "Enabled",
@@ -309,16 +309,16 @@ ok: [localhost] => {
                     "Status": "Enabled",
                     "Versioning": "Enabled",
                     "response_metadata": {
-                        "host_id": "WGRa5tBvEdk2VHb0gj6RIgvZX0pqGkrmIZXAWR2ZmI7rUhZiBVy1kUbSZ+tPOIhRfLhQ4DKUB13p6gok20Ecp5AJIE3EEO4T",
+                        "host_id": "laiY08CpOz9lLBiWKxpoBtHzV4EwQxB6M/wX5N3R4mCcP8+N02Z4YSdlrzlCUEI5XTmaXucLppFoB804nhGZ6pygvTRLZryElTFIzL/WWdc=",
                         "http_headers": {
-                            "date": "Sun, 15 Jun 2025 08:06:34 GMT",
+                            "date": "Sun, 15 Jun 2025 09:13:52 GMT",
                             "server": "AmazonS3",
                             "transfer-encoding": "chunked",
-                            "x-amz-id-2": "WGRa5tBvEdk2VHb0gj6RIgvZX0pqGkrmIZXAWR2ZmI7rUhZiBVy1kUbSZ+tPOIhRfLhQ4DKUB13p6gok20Ecp5AJIE3EEO4T",
-                            "x-amz-request-id": "F46SASMBGDPCXTXV"
+                            "x-amz-id-2": "laiY08CpOz9lLBiWKxpoBtHzV4EwQxB6M/wX5N3R4mCcP8+N02Z4YSdlrzlCUEI5XTmaXucLppFoB804nhGZ6pygvTRLZryElTFIzL/WWdc=",
+                            "x-amz-request-id": "8TAC3RR3N8QN3ZNB"
                         },
                         "http_status_code": 200,
-                        "request_id": "F46SASMBGDPCXTXV",
+                        "request_id": "8TAC3RR3N8QN3ZNB",
                         "retry_attempts": 0
                     },
                     "status": "Enabled",
@@ -331,4 +331,4 @@ ok: [localhost] => {
 }
 
 PLAY RECAP ****************************************************************************************************************************
-localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
