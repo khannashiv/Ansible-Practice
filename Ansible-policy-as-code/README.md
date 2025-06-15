@@ -1,32 +1,42 @@
-## Using ansible as policy as code.
+# Using Ansible as Policy as Code
 
-- In this practice handson we are writting up ansible playbook which will look for S3 buckets present under aws acccount & fetch it's information. Not only that but also enable versioning on S3 bucket if it's disabled on any S3 bucket.
+In this hands-on practice, we are writing an Ansible playbook that will:
+- Discover S3 buckets present under an AWS account and fetch their information.
+- Enable versioning on S3 buckets if not already enabled.
 
-## Refrence Docs
-- https://docs.ansible.com/ansible/latest/collections/amazon/aws/s3_bucket_module.html#ansible-collections-amazon-aws-s3-bucket-module
-- https://docs.ansible.com/ansible/latest/collections/amazon/aws/s3_bucket_info_module.html#ansible-collections-amazon-aws-s3-bucket-info-module
-- https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html
-- https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_lookups.html
-- https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html
-- https://github.com/iam-veeramalla/ansible-zero-to-hero
+---
 
-## Command used
+## Reference Docs
 
-- (ansible-venv) ubuntu@LAPTOP-49SH4K4V:~/Ansible-Practice-1/Ansible-policy-as-code$ ansible-playbook pac.yaml
+- [Ansible aws_s3_bucket Module](https://docs.ansible.com/ansible/latest/collections/amazon/aws/s3_bucket_module.html#ansible-collections-amazon-aws-s3-bucket-module)
+- [Ansible aws_s3_bucket_info Module](https://docs.ansible.com/ansible/latest/collections/amazon/aws/s3_bucket_info_module.html#ansible-collections-amazon-aws-s3-bucket-info-module)
+- [Ansible Playbook Guide: Environment](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_environment.html)
+- [Ansible Playbook Guide: Lookups](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_lookups.html)
+- [Ansible Playbook Guide: Loops](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html)
+- [Ansible Zero to Hero (GitHub)](https://github.com/iam-veeramalla/ansible-zero-to-hero)
 
-🔁 Quick Rule of Thumb
-| Use Case | Use | | Use - |
-|----------------------------------|----------------------|-----------------------------|
-| One multiline string | ✅ Yes | 🚫 No |
-| Multiple independent messages | 🚫 No | ✅ Yes |
-| Want newline preserved | ✅ Yes | 🚫 No (each is separate) |
-| Output shown as YAML list | 🚫 No | ✅ Yes |
+---
 
---- 
+## Command Used
 
-## Outcomes of this hands-on in the form of screenshots
+```bash
+(ansible-venv) ubuntu@LAPTOP-49SH4K4V:~/Ansible-Practice-1/Ansible-policy-as-code$ ansible-playbook pac.yaml
+```
 
---- 
+---
+
+## Quick Rule of Thumb
+
+| Use Case                       | Use `|-` (Literal Block) | Use `|` (Folded Block)      |
+|---------------------------------|:-----------------------:|:--------------------------:|
+| One multiline string            |          ✅ Yes         |            🚫 No           |
+| Multiple independent messages   |          🚫 No          |            ✅ Yes           |
+| Want newline preserved          |          ✅ Yes         |            🚫 No           |
+| Output shown as YAML list       |          🚫 No          |            ✅ Yes           |
+
+---
+
+## Outcomes of this Hands-On (Screenshots)
 
 - ![Ansible-PAC-1](../Images/Ansible-PAC-1.png)
 - ![Ansible-PAC-2](../Images/Ansible-PAC-2.png)
