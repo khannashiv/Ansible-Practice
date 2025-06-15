@@ -45,5 +45,7 @@ In this hands-on practice, we are writing an Ansible playbook that will:
 - ![Ansible-PAC-5](../Images/Ansible-PAC-5.png)
 - ![Ansible-PAC-6](../Images/Ansible-PAC-6.png)
 - ![Ansible-PAC-7](../Images/Ansible-PAC-7.png)
+- ![Ansible-PAC-8](../Images/Ansible-PAC-8.png)
+- ![Ansible-PAC-9](../Images/Ansible-PAC-9.png)
 
 ---
