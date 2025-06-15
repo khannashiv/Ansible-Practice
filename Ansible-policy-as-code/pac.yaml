@@ -46,4 +46,3 @@
     #       Bucket 1 versioning: {{ versioning_result.results[0].versioning.Versioning }}
     #       Bucket 2 versioning: {{ versioning_result.results[1].versioning.Versioning }}
     #       Bucket 3 versioning: {{ versioning_result.results[2].versioning.Versioning }}
-
