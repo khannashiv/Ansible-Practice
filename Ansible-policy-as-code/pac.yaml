@@ -31,14 +31,14 @@
 
     - name: Checking versioning on S3 buckets
       amazon.aws.s3_bucket:
-        name: "{{ item.name }}"
+        name: "{{ item.name }} versioning: {{ item.versioning.Versioning }}"
         versioning: true
       loop: "{{ result.buckets }}"
       register: versioning_result
 
-    - name: Versioning of bucket 1
-      ansible.builtin.debug:
-        var: versioning_result.results[0].versioning.Versioning
+    # - name: Versioning of bucket 1
+    #   ansible.builtin.debug:
+    #     var: versioning_result.results[0].versioning.Versioning
 
     # - name: Display versioning for all buckets
     #   ansible.builtin.debug:
