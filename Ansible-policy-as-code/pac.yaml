@@ -18,16 +18,16 @@
       ansible.builtin.debug:
         var: result
 
-    # - name: Display first bucket
-    #   ansible.builtin.debug:
-    #     var: result.buckets[0]
+    - name: Display first bucket
+      ansible.builtin.debug:
+        var: result.buckets[0]
 
-    # - name: Display summary
-    #   ansible.builtin.debug:
-    #     msg:
-    #       - "Total buckets: {{ result.buckets | length }}"
-    #       - "First bucket: {{ result.buckets[0] }}"
-    #       - "First bucket name: {{ result.buckets[0].name }}"
+    - name: Display summary
+      ansible.builtin.debug:
+        msg:
+          - "Total buckets: {{ result.buckets | length }}"
+          - "First bucket: {{ result.buckets[0] }}"
+          - "First bucket name: {{ result.buckets[0].name }}"
 
     - name: Get and enable versioning  for each bucket
       amazon.aws.s3_bucket:
@@ -41,16 +41,16 @@
       ansible.builtin.debug:
         var: versioning_result
 
-    - name: Display versioning status for each bucket
+    - name: Display versioning status for each bucket using loop
       ansible.builtin.debug:
         msg: "Bucket {{ item.item.name }} - Versioning: {{ item.versioning.Status }}"
       loop: "{{ versioning_result.results }}"
 
-    # - name: Versioning of bucket 1
-    #   ansible.builtin.debug:
-    #     var: versioning_result.results[0].versioning.Versioning
+    - name: Versioning of bucket 1
+      ansible.builtin.debug:
+        var: versioning_result.results[0].versioning.Status
 
-    - name: Display versioning for all buckets
+    - name: Display versioning for all buckets using hardcoded index approach
       ansible.builtin.debug:
         msg: |
           Bucket 1 versioning: {{ versioning_result.results[0].versioning.Status }}
