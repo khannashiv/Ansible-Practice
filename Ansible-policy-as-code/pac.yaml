@@ -33,6 +33,7 @@
       amazon.aws.s3_bucket:
         name: "{{ item.name }}"
         state: present
+        versioning: true
       loop: "{{ result.buckets }}"
       register: versioning_result
 
