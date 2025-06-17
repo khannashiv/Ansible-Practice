@@ -1,0 +1,30 @@
+---
+- name: Creating 2 ubuntu and 1 centos ec2 machine
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Debug acess key id and secret access key_name
+      ansible.builtin.debug:
+        msg: "Access Key: {{ aws_access_key_id }}, Secret Key: {{ aws_secret_access_key }}"
+
+    - name: Creating instances on aws
+      amazon.aws.ec2_instance:
+        name: "{{ item.name }}"
+        instance_type: t2.micro
+        aws_access_key: "{{ aws_access_key_id }}"
+        aws_secret_key: "{{ aws_secret_access_key }}"
+        key_name: "Jenkins-KVP"
+        region: "us-east-1"
+        security_group: default
+        image_id: "{{ item.image_id }}"
+        network_interfaces:
+          - assign_public_ip: true
+      loop:
+        - {name: ansible-managed-node-1, image_id: ami-020cba7c55df1f615}
+        - {name: ansible-managed-node-2, image_id: ami-020cba7c55df1f615}
+        - {name: ansible-managed-node-3, image_id: ami-09e6f87a47903347c}
+
+      # loop:
+      #   - ami-020cba7c55df1f615
+      #   - ami-020cba7c55df1f615
+      #   - ami-09e6f87a47903347c
