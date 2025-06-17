@@ -21,10 +21,16 @@ Hint: Use `when` condition on ansible `gather_facts`
 
 ## Refrence Docs
 
-- https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html
+- [Ansible Playbooks: Variables and Facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html)
 
-## Outcomes of Hands-on
+## Outcomes of Hands-on for Project-1
 
 ---
+
+- ![Project-1-outcome-1](../Images/Project-1-outcome-1.png)
+- ![Project-1-outcome-2](../Images/Project-1-outcome-2.png)
+- ![Project-1-outcome-3](../Images/Project-1-outcome-3.png)
+- ![Project-1-outcome-4](../Images/Project-1-outcome-4.png)
+- ![Project-1-outcome-5](../Images/Project-1-outcome-5.png)
 
 ---
